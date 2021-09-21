@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./styles.css";
 
-function App() {
+const App = () => {
+  const [file, setFile] = useState([]);
+
+  function uploadSingleFile(e) {
+    setFile([...file, URL.createObjectURL(e.target.files[0])]);
+    console.log("file", file);
+  }
+
+  function upload(e) {
+    e.preventDefault();
+    console.log(file);
+  }
+
+  function deleteFile(e) {
+    const s = file.filter((item, index) => index !== e);
+    setFile(s);
+    console.log(s);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <form>
+      <div className="form-group preview">
+        {file.length > 0 &&
+          file.map((item, index) => {
+            return (
+              <div key={item}>
+                <img src={item} alt="" />
+                <button type="button" onClick={() => deleteFile(index)}>
+                  delete
+                </button>
+              </div>
+            );
+          })}
+      </div>
+
+      <div className="form-group">
+        <input
+          type="file"
+          disabled={file.length === 5}
+          className="form-control"
+          onChange={uploadSingleFile}
+        />
+      </div>
+      <button
+        type="button"
+        className="btn btn-primary btn-block"
+        onClick={upload}
+      >
+        Upload
+      </button>
+    </form>
   );
-}
+};
 
 export default App;
