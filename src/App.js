@@ -8,6 +8,7 @@ const App = () => {
   function uploadSingleFile(e) {
     setFile([...file, URL.createObjectURL(e.target.files[0])]);
     console.log("file", file);
+    console.log(e.target.files)
   }
 
   function upload(e) {
