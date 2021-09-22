@@ -23,13 +23,13 @@ const App = () => {
 
   return (
     <form class="ui center aligned container">
-      <div>
+      <div class="ui hidden divider">
         {file.length > 0 &&
           file.map((item, index) => {
             return (
               <div key={item}>
-                <img src={item} alt="" />
-                <button type="button" onClick={() => deleteFile(index)}>
+                <img class="ui card" class1="ui medium rounded image" src={item} alt="" />
+                <button class="heart icon" type="button" onClick={() => deleteFile(index)}>
                   delete
                 </button>
               </div>
@@ -37,15 +37,18 @@ const App = () => {
           })}
       </div>
 
-      <div className="form-group">
-        <input
+      <div class="ui hidden divider">
+        <input class="ui primary button"
           type="file"
           disabled={file.length === 5}
           className="form-control"
           onChange={uploadSingleFile}
         />
       </div>
-      <button
+      <br></br>
+      <br></br>
+      <br></br>
+      <button class="ui primary button"
         type="button"
         className="btn btn-primary btn-block"
         onClick={upload}
