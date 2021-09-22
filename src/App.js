@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./styles.css";
+import 'semantic-ui-css/semantic.min.css'
+
 
 const App = () => {
   const [file, setFile] = useState([]);
@@ -21,8 +22,8 @@ const App = () => {
   }
 
   return (
-    <form>
-      <div className="form-group preview">
+    <form class="ui center aligned container">
+      <div>
         {file.length > 0 &&
           file.map((item, index) => {
             return (
