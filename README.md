@@ -20,7 +20,7 @@ You will also see any lint errors in the console.
 
 ### What you will see
 
-<iframe src="https://giphy.com/embed/KXLzj98Teon8KjvB0K" width="480" height="260" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/KXLzj98Teon8KjvB0K">via GIPHY</a></p>
+<img src="https://giphy.com/embed/KXLzj98Teon8KjvB0K" width="480" height="260" frameBorder="0" class="giphy-embed" allowFullScreen><p><a href="https://giphy.com/gifs/KXLzj98Teon8KjvB0K"></a></p>
 
 
 ### Current Issues 
