@@ -19,8 +19,7 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ### What you will see
-
-<img src="https://giphy.com/embed/KXLzj98Teon8KjvB0K" width="480" height="260" frameBorder="0" class="giphy-embed" allowFullScreen><p><a href="https://giphy.com/gifs/KXLzj98Teon8KjvB0K"></a></p>
+![Upload-image](https://media.giphy.com/media/KXLzj98Teon8KjvB0K/giphy.gif)
 
 
 ### Current Issues 
